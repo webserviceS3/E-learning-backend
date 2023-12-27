@@ -102,8 +102,8 @@ public class TestController {
     }
     @PostMapping("/addCour")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String addCoour(@RequestBody Cour cour){
-        return courService.addCour(cour);
+    public String addCoour(@RequestBody Cour courToAdd){
+        return courService.addCour(courToAdd);
     }
     @GetMapping("/getAllCours")
     public List<Cour> getAllcours(){
